@@ -15,6 +15,7 @@ restore_env(){
 main()
 {
     echo "start to restore env";
+    stop_program;
     restore_env;
     echo "finish restoring the environment"
 }
