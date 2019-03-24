@@ -71,6 +71,7 @@ main()
     maven_check || exit 1;
     tomcat_deploy;
     tomcat_startup_check || exit 1;
+    jenkins_deploy;
 }
 
 main
