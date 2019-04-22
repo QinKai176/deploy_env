@@ -1,7 +1,7 @@
 #!/bin/sh
 sudo docker pull microsoft/mssql-server-linux:2017-latest
 
-sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=eMbMs1234!'  -p 1433:1433 --name sqlserver -d microsoft/mssql-server-linux:2017-latest
+sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=eMbMs1234!' -e 'MSSQL_COLLATION=Chinese_PRC_CI_AS' -p 1433:1433 --name sqlserver -d microsoft/mssql-server-linux:2017-latest
 
 docker cp /Users/qinkai/Desktop/PT_STORE_JCGL_SK-20190412.BAK sqlserver:/var/opt/mssql/backup
 
